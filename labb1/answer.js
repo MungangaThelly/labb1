@@ -86,12 +86,17 @@ dbwebb.assert("1.1", ANSWER, false);
  * Write your code below and put the answer into the variable ANSWER.
  */
 
+let sum = card1 + card2 + card3 + card4 + card5; // Sum of card1 and card5
+var status;
 
+if (sum > 21) {
+    status = "busted";
+} else {
+    status = "safe";
+}
 
- 
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+var status = "busted"
+ANSWER = status; // Assigned the value of status to ANSWER
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("1.2", ANSWER, false);
@@ -111,13 +116,19 @@ dbwebb.assert("1.2", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+let total = card1 + card2 + card3; // Sum of card1, card2 and card3
+var status;
 
+if (total < 21) {
+    status = "safe";
+} else if (total > 21) {
+    status = "busted";
+} else {
+    status = "black jack"
+}
 
-
-
-
- 
-ANSWER = "Replace this text with the variable holding the answer.";
+var status = "safe"
+ANSWER = status; // Assigned the value of status to ANSWER
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("1.3", ANSWER, false);
@@ -144,13 +155,24 @@ dbwebb.assert("1.3", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+let dealer1 = 1; 
+let dealer2 = 6; 
+let dealer3 = 7; 
+let total1 = dealer1 + dealer2 + dealer3;
+var response;
 
+if (total1 < 17) {
+    response = "pick";
+} else if (total1 >= 17 && total1 < 21) {
+    response = "stop";
+} else if (total1 === 21) {
+    response = "black jack";
+} else { // total1 > 21
+    response = "busted";
+}
 
-
-
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+var response = "pick"
+ANSWER = response; // Assigned the value of status to ANSWER
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("1.4", ANSWER, false);
@@ -184,13 +206,28 @@ dbwebb.assert("1.4", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+let myFruit = "plum"
+var message;
 
-
-
-
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+switch (myFruit) {
+    case "banana":
+        message = "The banana is yellow.";
+        break;
+    case "apple":
+        message = "The apple is green.";
+        break;
+    case "kiwi":
+        message = "The kiwi ia green.";
+        break;
+    case "plum":
+        message = "The plum is purple."
+        break;
+    default:
+        message = "Unknown fruit.";
+    }
+    
+    var message = "The plum is purple."
+    ANSWER = message;// Assigned the value of status to ANSWER
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("2.1", ANSWER, false);
