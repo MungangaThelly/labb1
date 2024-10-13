@@ -67,7 +67,7 @@ let result = card1 + card2 + card3 + card4 + card5;
 ANSWER = result;
 
 // I will now test your answer - change false to true to get a hint.
-dbwebb.assert("1.1", ANSWER, false);
+dbwebb.assert("1.1", ANSWER, true);
 
 /**
  * Exercise 1.2 (1 points)
@@ -99,7 +99,7 @@ var status = "busted"
 ANSWER = status; // Assigned the value of status to ANSWER
 
 // I will now test your answer - change false to true to get a hint.
-dbwebb.assert("1.2", ANSWER, false);
+dbwebb.assert("1.2", ANSWER, true);
 
 /**
  * Exercise 1.3 (1 points)
@@ -131,7 +131,7 @@ var status = "safe"
 ANSWER = status; // Assigned the value of status to ANSWER
 
 // I will now test your answer - change false to true to get a hint.
-dbwebb.assert("1.3", ANSWER, false);
+dbwebb.assert("1.3", ANSWER, true);
 
 /**
  * Exercise 1.4 (2 points)
@@ -175,7 +175,7 @@ var response = "pick"
 ANSWER = response; // Assigned the value of status to ANSWER
 
 // I will now test your answer - change false to true to get a hint.
-dbwebb.assert("1.4", ANSWER, false);
+dbwebb.assert("1.4", ANSWER, true);
 
 /** ----------------------------------------------------------------------
  * Section 2 . Switch, case
@@ -222,15 +222,13 @@ switch (myFruit) {
     case "plum":
         message = "The plum is purple."
         break;
-    default:
-        message = "Unknown fruit.";
     }
     
     var message = "The plum is purple."
     ANSWER = message;// Assigned the value of status to ANSWER
 
 // I will now test your answer - change false to true to get a hint.
-dbwebb.assert("2.1", ANSWER, false);
+dbwebb.assert("2.1", ANSWER, true);
 
 /**
  * Exercise 2.2 (1 points)
@@ -245,16 +243,28 @@ dbwebb.assert("2.1", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+myFruit = 'pear';
+var answer;
 
-
-
-
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+switch (myFruit) {
+    case 'apple':
+        answer = "This is an apple.";
+        break;
+    case 'banana':
+        answer = "This is a banana.";
+        break;
+    case 'orange':
+        answer = "This is an orange.";
+        break;
+    default:
+        answer = "That is an unknown fruit.";
+    }
+    
+    var answer = "That is an unknown fruit."
+    ANSWER = answer; // Assigned the value of status to ANSWER
 
 // I will now test your answer - change false to true to get a hint.
-dbwebb.assert("2.2", ANSWER, false);
+dbwebb.assert("2.2", ANSWER, true);
 
 /** ----------------------------------------------------------------------
  * Section 3 . For loops
@@ -272,16 +282,17 @@ dbwebb.assert("2.2", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+var answer = 481;
 
+for (let i = 0; i < 10; i++) {
+    answer += 6;
+}
 
-
-
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+var answer = 541;
+ANSWER = answer; // Assigned the value of status to ANSWER
 
 // I will now test your answer - change false to true to get a hint.
-dbwebb.assert("3.1", ANSWER, false);
+dbwebb.assert("3.1", ANSWER, true);
 
 /**
  * Exercise 3.2 (1 points)
@@ -292,16 +303,15 @@ dbwebb.assert("3.1", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
-
-
-
-
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+var answer = 551;
+for (let i = 0; i < 10; i++) {
+    answer -= 8;
+}
+var answer = 471;
+ANSWER = answer; // Assigned the value of status to ANSWER
 
 // I will now test your answer - change false to true to get a hint.
-dbwebb.assert("3.2", ANSWER, false);
+dbwebb.assert("3.2", ANSWER, true);
 
 /**
  * Exercise 3.3 (3 points)
@@ -316,16 +326,21 @@ dbwebb.assert("3.2", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+var answer = "";
+for (let i = 22; i <= 45; i++) {
+    if (i % 2 === 0) {
+        if (answer) {
+            answer += ",";
+        }
+        answer += i;
+    }
+}
 
-
-
-
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+var answer = "22,24,26,28,30,32,34,36,38,40,42,44"
+ANSWER = answer;
 
 // I will now test your answer - change false to true to get a hint.
-dbwebb.assert("3.3", ANSWER, false);
+dbwebb.assert("3.3", ANSWER, true);
 
 /** ----------------------------------------------------------------------
  * Section 4 . While loops
@@ -344,13 +359,16 @@ dbwebb.assert("3.3", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+let value = 10; // Starting value
+let steps = 0;  // Step counter
 
+while (value < 481) {
+    value += 6; // Increment by 6
+    steps++;    // Count the step
+}
 
-
-
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+var answer = steps; // Store the number of steps
+ANSWER = answer;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("4.1", ANSWER, false);
@@ -365,13 +383,14 @@ dbwebb.assert("4.1", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
-
-
-
-
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+value = 551;
+steps = 0;
+while (value > 0) {
+    value -= 8;
+    steps ++;
+}
+var answer = steps;
+ANSWER = answer;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("4.2", ANSWER, false);
@@ -386,13 +405,20 @@ dbwebb.assert("4.2", ANSWER, false);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
+var answer = "";
+value = 28;
+while (value <= 63) {
+    if (value % 5 === 0 || value % 7 === 0) {
+        if (answer) {
+            answer += ",";
+        }
+        answer += value;
+    }
+    value++;
+}
 
-
-
-
-
-
-ANSWER = "Replace this text with the variable holding the answer.";
+var answer = "28,30,35,40,42,45,49,50,55,56,60,63";
+ANSWER = answer;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("4.3", ANSWER, false);
