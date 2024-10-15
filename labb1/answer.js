@@ -158,14 +158,14 @@ dbwebb.assert("1.3", ANSWER, true);
 let dealer1 = 1; 
 let dealer2 = 6; 
 let dealer3 = 7; 
-let total1 = dealer1 + dealer2 + dealer3;
+let totalCardSum = dealer1 + dealer2 + dealer3;
 var response;
 
-if (total1 < 17) {
+if (totalCardSum < 17) {
     response = "pick";
-} else if (total1 >= 17 && total1 < 21) {
+} else if (totalCardSum >= 17 && total1 < 21) {
     response = "stop";
-} else if (total1 === 21) {
+} else if (totalCardSum === 21) {
     response = "black jack";
 } else { // total1 > 21
     response = "busted";
@@ -222,6 +222,8 @@ switch (myFruit) {
     case "plum":
         message = "The plum is purple."
         break;
+    default:
+        break
     }
     
     var message = "The plum is purple."
@@ -303,12 +305,12 @@ dbwebb.assert("3.1", ANSWER, true);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
-var answer = 551;
+result = 551;
 for (let i = 0; i < 10; i++) {
-    answer -= 8;
+    result -= 8;
 }
-var answer = 471;
-ANSWER = answer; // Assigned the value of status to ANSWER
+result = 471;
+ANSWER = result; // Assigned the value of status to ANSWER
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("3.2", ANSWER, true);
@@ -326,18 +328,18 @@ dbwebb.assert("3.2", ANSWER, true);
  *
  * Write your code below and put the answer into the variable ANSWER.
  */
-var answer = "";
+result = "";
 for (let i = 22; i <= 45; i++) {
     if (i % 2 === 0) {
-        if (answer) {
-            answer += ",";
+        if (result) {
+            result += ",";
         }
-        answer += i;
+        result += i;
     }
 }
 
-var answer = "22,24,26,28,30,32,34,36,38,40,42,44"
-ANSWER = answer;
+result = "22,24,26,28,30,32,34,36,38,40,42,44"
+ANSWER = result;
 
 // I will now test your answer - change false to true to get a hint.
 dbwebb.assert("3.3", ANSWER, true);
